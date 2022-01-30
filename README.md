@@ -1,3 +1,3 @@
 ```
-bash <(curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/init.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/setup.sh)
 ```
