@@ -1,0 +1,28 @@
+brew "direnv"
+brew "docker", link: false
+brew "docker-compose"
+brew "git"
+brew "hstr"
+brew "imagemagick"
+brew "jq"
+brew "kubernetes-cli"
+brew "libev"
+brew "libgit2"
+brew "libgsf"
+brew "libssh2"
+brew "mas"
+brew "postgresql"
+brew "terraform"
+brew "wget"
+
+cask "docker"
+cask "google-chrome"
+cask "google-cloud-sdk"
+cask "gpg-suite"
+cask "iterm2"
+cask "slack"
+cask "spotify"
+cask "visual-studio-code"
+cask "zoom"
+
+mas "Xcode", id: 497799835
