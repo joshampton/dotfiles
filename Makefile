@@ -1,5 +1,3 @@
-setup: system-setup install-homebrew install-packages install-oh-my-zsh install-asdf
-
 install-oh-my-zsh:
 	sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
