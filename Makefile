@@ -1,4 +1,7 @@
-setup: system-setup install-homebrew isntall-packages install-asdf
+setup: system-setup isntall-oh-my-zsh install-homebrew install-packages install-asdf
+
+install-oh-my-zsh:
+	sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 install-homebrew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
