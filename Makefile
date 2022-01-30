@@ -9,19 +9,13 @@ install-homebrew:
 	eval "$$(/opt/homebrew/bin/brew shellenv)"
 
 install-packages:
+	rm -f ~/.Brewfile
+	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.Brewfile > ~/.Brewfile
 	brew bundle
 
 install-asdf:
 	rm -rf ~/.asdf
 	git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-	~/.asdf/bin/asdf plugin-add nodejs
-	~/.asdf/bin/asdf plugin-add erlang
-	~/.asdf/bin/asdf plugin-add elixir
-	~/.asdf/bin/asdf plugin-add ruby
-	~/.asdf/bin/asdf plugin-add crystal
-	~/.asdf/bin/asdf plugin-add java
-	bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-	asdf install
 
 system-setup:
 	# Close any open System Preferences panes, to prevent them from overriding
