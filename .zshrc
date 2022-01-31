@@ -110,8 +110,6 @@ source $ZSH/oh-my-zsh.sh
 export JAVA_HOME="/Users/jhampton/.asdf/installs/java/corretto-8.265.01.1"
 export ANDROID_HOME="/usr/local/share/android-sdk"
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
-export GITLAB_REGISTRY_USERNAME="jhampton1"
-export GITLAB_REGISTRY_PASSWORD="zS-RCFvqhZZRMZA5m5yE"
 
 # HSTR configuration - add this to ~/.zshrc
 alias hh=hstr                    # hh to be alias for hstr
