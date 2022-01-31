@@ -92,8 +92,8 @@ os:
 	defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 	# Set a blazingly fast keyboard repeat rate
-	defaults write NSGlobalDomain KeyRepeat -int 1
-	defaults write NSGlobalDomain InitialKeyRepeat -int 25
+	defaults write NSGlobalDomain KeyRepeat -int 10
+	defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 	# Disable “natural” (Lion-style) scrolling
 	defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
