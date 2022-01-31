@@ -1,3 +1,7 @@
+# TODO
+
+Maybe this is a good use for ansible playbooks
+
 # Checklist
 
 - [ ] Copy private files
