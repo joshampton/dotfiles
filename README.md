@@ -1,6 +1,5 @@
 # TODO
 
-- [ ] vscode settings
 - [ ] investigate ansible
 
 # Installation Checklist
@@ -40,12 +39,3 @@ Modifies OS preferences and reindexes spotlight:
 ```console
 make -C ~ os
 ```
-
-# Post Install Checklist
-
-- [ ] launch slack
-- [ ] launch chrome
-- [ ] launch docker
-- [ ] launch spotify
-- [ ] launch vscode
-- [ ] launch zoom
