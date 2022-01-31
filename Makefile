@@ -1,6 +1,6 @@
 init:
+	xcode-select --install
 	sudo softwareupdate --install-rosetta
-	xcode-select --install &> /dev/null || true
 
 setup: install-homebrew install-packages install-oh-my-zsh install-asdf
 
