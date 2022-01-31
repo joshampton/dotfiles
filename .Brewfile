@@ -1,6 +1,4 @@
 brew "direnv"
-brew "docker", link: false
-brew "docker-compose"
 brew "git"
 brew "hstr"
 brew "imagemagick"
@@ -20,7 +18,10 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 cask "gpg-suite"
 cask "iterm2"
+cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
+
+mas "Bitwarden", id: 1352778147
