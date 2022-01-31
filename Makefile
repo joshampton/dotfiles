@@ -1,7 +1,6 @@
-system-prep:
-	sudo softwareupdate --install-rosetta
-	sudo rm -rf /Library/Developer/CommandLineTools
-	xcode-select --install
+system: system-prep system-setup
+
+apps: install-homebrew install-packages install-oh-my-zsh install-asdf
 
 install-homebrew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -18,9 +17,14 @@ install-asdf:
 	rm -rf ~/.asdf
 	git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
+system-prep:
+	sudo softwareupdate --install-rosetta
+	sudo rm -rf /Library/Developer/CommandLineTools
+	xcode-select --install
+
 system-setup:
 	# Close any open System Preferences panes, to prevent them from overriding
-	# settings we’re about to change
+	# settings we're about to change
 	osascript -e 'tell application "System Preferences" to quit'
 	# Ask for the administrator password upfront
 	sudo -v
