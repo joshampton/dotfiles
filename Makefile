@@ -2,8 +2,8 @@ install-oh-my-zsh:
 	sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 install-homebrew:
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	brew -v
+	sudo softwareupdate --install-rosetta
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 install-packages:
 	rm -f ~/.Brewfile
@@ -78,6 +78,9 @@ system-setup:
 	# Set a blazingly fast keyboard repeat rate
 	defaults write NSGlobalDomain KeyRepeat -int 1
 	defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+	# Disable “natural” (Lion-style) scrolling
+	defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 	# Set the timezone; see `sudo systemsetup -listtimezones` for other values
 	sudo systemsetup -settimezone "America/Denver" > /dev/null
