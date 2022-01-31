@@ -1,3 +1,12 @@
-OS: `bash <(curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/init.sh)`
+OS:
 
-Apps: `bash <(curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/setup.sh)`
+```console
+bash <(curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/init.sh)`
+```
+
+Apps:
+
+
+```console
+bash <(curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/setup.sh)`
+```
