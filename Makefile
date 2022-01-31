@@ -1,14 +1,18 @@
-install-oh-my-zsh:
-	sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+system-prep:
+	sudo softwareupdate --install-rosetta
+	sudo rm -rf /Library/Developer/CommandLineTools
+	xcode-select --install
 
 install-homebrew:
-	sudo softwareupdate --install-rosetta
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 install-packages:
 	rm -f ~/.Brewfile
 	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.Brewfile > ~/.Brewfile
 	brew bundle
+
+install-oh-my-zsh:
+	sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 install-asdf:
 	rm -rf ~/.asdf
@@ -23,12 +27,6 @@ system-setup:
 
 	# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-	###############################################################################
-	# Rosetta                                                                     #
-	###############################################################################
-
-	softwareupdate --install-rosetta
 
 	###############################################################################
 	# General UI/UX                                                               #
