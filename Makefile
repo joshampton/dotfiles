@@ -1,6 +1,7 @@
 init:
 	sudo softwareupdate --install-rosetta
 	xcode-select --install
+	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.zshrc
 
 setup: install-homebrew install-packages install-oh-my-zsh install-asdf
 
