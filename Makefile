@@ -15,6 +15,7 @@ install-packages:
 	brew bundle --verbose --global
 
 install-oh-my-zsh:
+	rm -rf ~/.oh-my-zsh
 	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.zshrc > ~/.zshrc
 	sh -c "$$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
