@@ -1,15 +1,8 @@
-init: repo dependencies
-
-setup: install-homebrew install-packages install-oh-my-zsh install-asdf
-
-init-repo:
-	rm -rf .git
-	git init -b main
-	git remote add origin git@github.com:joshampton/dotfiles.git
-
-dependencies:
+init:
 	sudo softwareupdate --install-rosetta
 	xcode-select --install
+
+setup: install-homebrew install-packages install-oh-my-zsh install-asdf
 
 install-homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

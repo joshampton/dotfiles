@@ -8,7 +8,7 @@
 
 ## Init
 
-Install system dependencies and initializes the home directory as a git repo:
+Install system dependencies:
 
 ```console
 bash <(curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/init.sh)
