@@ -26,6 +26,12 @@ Installs brew, applications, oh-my-zsh, and asdf:
 make -C ~ setup
 ```
 
+## Link
+
+```console
+make -C ~ link
+```
+
 ## OS
 
 Modifies OS preferences and reindexes spotlight:
