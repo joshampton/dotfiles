@@ -1,6 +1,4 @@
 brew "direnv"
-brew "docker", link: false
-brew "docker-compose"
 brew "git"
 brew "hstr"
 brew "imagemagick"
