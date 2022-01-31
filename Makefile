@@ -3,6 +3,8 @@ install-oh-my-zsh:
 
 install-homebrew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	export PATH="/usr/local/bin:$PATH"
+	which brew
 
 install-packages:
 	rm -f ~/.Brewfile
