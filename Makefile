@@ -2,9 +2,8 @@ install-oh-my-zsh:
 	sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 install-homebrew:
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	export PATH="/usr/local/bin:$PATH"
-	which brew
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	brew -v
 
 install-packages:
 	rm -f ~/.Brewfile
