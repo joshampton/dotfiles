@@ -1,16 +1,15 @@
-init: git-init dependencies
+init: repo dependencies
 
 setup: install-homebrew install-packages install-oh-my-zsh install-asdf
 
-dependencies:
-	sudo softwareupdate --install-rosetta
-	sudo rm -rf /Library/Developer/CommandLineTools
-	xcode-select --install
-
-git-init:
+init-repo:
 	rm -rf .git
 	git init -b main
 	git remote add origin git@github.com:joshampton/dotfiles.git
+
+dependencies:
+	sudo softwareupdate --install-rosetta
+	xcode-select --install
 
 install-homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -28,6 +27,14 @@ install-oh-my-zsh:
 install-asdf:
 	rm -rf ~/.asdf
 	git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+
+link:
+	rm -rf $$HOME/.ssh
+	ln -s $$HOME/.private/ssh $$HOME/.ssh
+	chmod -h 700 $$HOME/.ssh
+	rm -rf $$HOME/.gnupg
+	ln -s $$HOME/.private/gnupg $$HOME/.gnupg
+	chmod -h 700 $$HOME/.gnupg
 
 os:
 	# Close any open System Preferences panes, to prevent them from overriding

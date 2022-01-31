@@ -3,6 +3,7 @@
 - [ ] Copy private files
 - [ ] Init
 - [ ] Setup
+- [ ] Link
 - [ ] OS
 
 ## Init
