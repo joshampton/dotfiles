@@ -1,7 +1,6 @@
 init:
 	sudo softwareupdate --install-rosetta
 	xcode-select --install &> /dev/null || true
-	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.zshrc
 
 setup: install-homebrew install-packages install-oh-my-zsh install-asdf
 
@@ -16,6 +15,7 @@ install-packages:
 	brew bundle --verbose --global
 
 install-oh-my-zsh:
+	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.zshrc > ~/.zshrc
 	sh -c "$$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 install-asdf:
