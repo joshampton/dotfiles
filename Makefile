@@ -8,9 +8,9 @@ install-homebrew:
 	eval "$$(/opt/homebrew/bin/brew shellenv)"
 
 install-packages:
-	rm -f ~/.Brewfile
-	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.Brewfile > ~/.Brewfile
-	brew bundle
+	rm -f ~/Brewfile
+	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/Brewfile > ~/Brewfile
+	brew bundle --verbose --global
 
 install-oh-my-zsh:
 	sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
