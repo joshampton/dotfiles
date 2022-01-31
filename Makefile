@@ -1,6 +1,6 @@
 init:
 	sudo softwareupdate --install-rosetta
-	xcode-select --install
+	xcode-select --install &> /dev/null || true
 	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.zshrc
 
 setup: install-homebrew install-packages install-oh-my-zsh install-asdf
@@ -277,18 +277,3 @@ os:
 	@echo "restarting in 10 seconds"
 	@sleep 10
 	sudo reboot
-
-git-init:
-	rm -rf ./.git
-	git init
-	git remote add origin git@github.com:joshampton/dotfiles.git
-
-pull-changes:
-	git pull origin master
-	git submodule update --recursive --remote
-
-brew-bundle:
-	brew bundle --verbose --global
-
-brew-cleanup:
-	brew bundle cleanup --force --global
