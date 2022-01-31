@@ -1,6 +1,9 @@
-system: system-prep system-setup
+init:
+	rm -rf .git
+	git init
+	git remote add origin git@github.com:joshampton/dotfiles.git
 
-apps: install-homebrew install-packages install-oh-my-zsh install-asdf
+setup: install-homebrew install-packages install-oh-my-zsh install-asdf
 
 install-homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -19,12 +22,12 @@ install-asdf:
 	rm -rf ~/.asdf
 	git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
-system-prep:
+dependencies:
 	sudo softwareupdate --install-rosetta
 	sudo rm -rf /Library/Developer/CommandLineTools
 	xcode-select --install
 
-system-setup:
+os:
 	# Close any open System Preferences panes, to prevent them from overriding
 	# settings we're about to change
 	osascript -e 'tell application "System Preferences" to quit'
@@ -81,7 +84,7 @@ system-setup:
 
 	# Set a blazingly fast keyboard repeat rate
 	defaults write NSGlobalDomain KeyRepeat -int 1
-	defaults write NSGlobalDomain InitialKeyRepeat -int 10
+	defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 	# Disable “natural” (Lion-style) scrolling
 	defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
