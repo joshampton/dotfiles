@@ -2,7 +2,7 @@
 
 Maybe this is a good use for ansible playbooks
 
-# Checklist
+# Installation Checklist
 
 - [ ] Copy private files
 - [ ] Init
@@ -39,3 +39,12 @@ Modifies OS preferences and reindexes spotlight:
 ```console
 make -C ~ os
 ```
+
+# Post Install Checklist
+
+- [ ] launch slack
+- [ ] launch chrome
+- [ ] launch docker
+- [ ] launch spotify
+- [ ] launch vscode
+- [ ] launch zoom

@@ -18,6 +18,7 @@ install-oh-my-zsh:
 	rm -rf ~/.oh-my-zsh
 	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.zshrc > ~/.zshrc
 	sh -c "$$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+	cd ~
 
 install-asdf:
 	rm -rf ~/.asdf
