@@ -1,6 +1,7 @@
 # TODO
 
-Maybe this is a good use for ansible playbooks
+- [ ] vscode settings
+- [ ] investigate ansible
 
 # Installation Checklist
 

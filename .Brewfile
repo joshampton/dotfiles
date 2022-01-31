@@ -20,7 +20,10 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 cask "gpg-suite"
 cask "iterm2"
+cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
+
+mas "Bitwarden", id: 1352778147
