@@ -1,0 +1,12 @@
+[init]
+	defaultBranch = main
+[alias]
+	s = status
+	bn = rev-parse --abbrev-ref HEAD
+	ch = checkout
+	ls = ls-files --modified --others --exclude-standard --
+	lsi = diff --name-only --relative --cached --diff-filter=AM
+	psu = push --set-upstream origin
+	ab = stash push --include-untracked -- ':(exclude)test/'
+[commit]
+	verbose = true
