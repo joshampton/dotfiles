@@ -1,7 +1,7 @@
 init:
 	xcode-select --install
 
-setup: os install-homebrew install-packages install-oh-my-zsh
+setup: install-homebrew install-packages install-oh-my-zsh os
 
 install-homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -146,9 +146,6 @@ os:
 
 	# Disable the Launchpad gesture (pinch with thumb and three fingers)
 	defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
-
-	# Reset Launchpad, but keep the desktop wallpaper intact
-	find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 	###############################################################################
 	# Spotlight                                                                   #
