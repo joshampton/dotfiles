@@ -1,5 +1,6 @@
 cask "discord"
 cask "docker"
+cask "elgato-stream-deck"
 cask "google-chrome"
 cask "gpg-suite"
 cask "homerow"
