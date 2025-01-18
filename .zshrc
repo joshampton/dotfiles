@@ -120,7 +120,6 @@ bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode che
 # direnv configuration
 eval "$(direnv hook zsh)"
 
-
 # HSTR configuration - add this to ~/.zshrc
 alias hh=hstr                    # hh to be alias for hstr
 setopt histignorespace           # skip cmds w/ leading space from history
@@ -131,3 +130,5 @@ source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 source $HOME/.asdf/plugins/java/set-java-home.zsh
 
+alias g=git
+alias k=kubectl
