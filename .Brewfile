@@ -1,3 +1,4 @@
+cask "discord"
 cask "docker"
 cask "google-chrome"
 cask "gpg-suite"
