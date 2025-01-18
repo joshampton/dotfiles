@@ -7,3 +7,5 @@ cask "slack"
 cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
+
+brew "hstr"
