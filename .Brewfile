@@ -11,4 +11,8 @@ cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
 
+brew "git"
 brew "hstr"
+brew "kubernetes-cli"
+brew "postgresql"
+brew "wget"
