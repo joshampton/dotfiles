@@ -22,7 +22,7 @@ install-oh-my-zsh:
 
 configure:
 	rm -rf ~/.gitconfig
-	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/.gitconfig > ~/.gitconfig
+	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.gitconfig > ~/.gitconfig
 
 os:
 	# Close any open System Preferences panes, to prevent them from overriding
