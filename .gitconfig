@@ -3,10 +3,11 @@
 [alias]
 	s = status
 	bn = rev-parse --abbrev-ref HEAD
-	ch = checkout
+	co = checkout
 	ls = ls-files --modified --others --exclude-standard --
 	lsi = diff --name-only --relative --cached --diff-filter=AM
 	psu = push --set-upstream origin
 	ab = stash push --include-untracked -- ':(exclude)test/'
+	recent = for-each-ref --sort=-committerdate --count=15 --format='%(refname:short)' refs/heads/
 [commit]
 	verbose = true
