@@ -1,7 +1,7 @@
 init:
 	xcode-select --install
 
-setup: install-homebrew install-packages install-oh-my-zsh os
+setup: install-homebrew install-packages install-oh-my-zsh configure os
 
 install-homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -19,6 +19,10 @@ install-oh-my-zsh:
 	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/main/.zshrc > ~/.zshrc
 	sh -c "$$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 	cd ~
+
+configure:
+	rm -rf ~/.gitconfig
+	curl -sSL https://raw.githubusercontent.com/joshampton/dotfiles/.gitconfig > ~/.gitconfig
 
 os:
 	# Close any open System Preferences panes, to prevent them from overriding
